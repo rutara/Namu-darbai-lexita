@@ -1,0 +1,83 @@
+$theme:rgb(77, 108, 150);
+$secondary:rgb(117, 121, 139);
+$trinary:rgb(185, 183, 153);
+$extra-color:rgb(166, 165, 179);
+$extra-color-2:rgb(199, 200, 204);
+@mixin default-type {
+ background-color: $extra-color-2;
+ border: 4px solid $secondary;
+}
+#static {
+    position: static;
+}
+#sticky {
+    position: sticky;
+    top:20px;
+    left:150px;
+
+}
+#relative {
+    position: relative;
+    left: 50%;
+    top: 5px;
+}
+#absolute {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#fixed {
+    position: fixed;
+    top: 20px;
+    right: 320px;
+}
+div{
+    border: 4px solid $secondary;
+    width: 95%;
+    margin:auto;
+    //background-color: $secondary;
+    
+   
+ div {
+    height: auto;
+    width: 150px;
+    @include default-type;
+    padding: 10px;
+    margin:0;
+}
+}
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.block{
+    display:block;
+}
+
+.none {
+    display: none;
+}
+.flex{
+    display:inline-flex;
+    flex-wrap: wrap;
+    height: 500px;
+}
+.displays {
+    width: 30%;
+    background-color:$secondary;
+   
+}
+button{
+    width: 100px;
+    @include default-type;
+}
+body{
+    text-align:center;
+    padding-bottom:100px;
+    //background: linear-gradient($theme, $extra-color-2);
+    background-color: $extra-color;
+}

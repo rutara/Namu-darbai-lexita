@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <main>
+        <h2>Position:</h2>
+        <div>
+                <div id="sticky">
+                    <p>position:sticky</p>
+                </div>
+            <div id="static">
+                <p>position:static</p>
+                <p>Ši pozicija yra numatytoji. Elementas yra pirmoje galimoje vietoje.</p>
+            </div>
+            <div id="relative">
+                <p>Position:relative</p>
+                <p>
+                    Ši pozicija veikia iš dalies kaip static, elementas iš karto randa vietą pirmoje galimoje vietoje. Išskyrus tai, kad poziciją
+                    dar galima koreguoti: būtent šisi elementas yra 5 px nutolęs nuo viršaus ir 50% nuo kairės. Priklauso
+                    tiek nuo tėvinio elemento, tiek nuo aukščiau esančio.
+                </p>
+            </div>
+
+            <div id="fixed">
+                <p>
+                    position:fixed
+                </p>
+                <p>
+                    Fixed pozicija užsifiksuoja nustatytoje lango vietoje ir nepriklauso nuo to, kiek scrolini puslapį. Šiuo atveju nustatyta tiksli vieta:
+                    20px nuo viršaus ir 320px nuo dešinės.
+                </p>
+            </div>
+            <div id="absolute">
+                <p>position:absolute</p>
+                <p>
+                    Su absolute elementas yra pozicionuojamas prie artimiausio pozicionuoto tėvinio elemento (išskyrus static). Si pozicija ignoruoja 
+                    visus kitus elementus, taigi elementą su šia pozicija galima dėt ant paveikslėlių ir kt.
+                </p>
+            </div>
+       
+        </div>
+        <h2>Display:</h2>
+        <div class="flex">
+            <div>
+                <b>Display:block;</b>
+                <p>Atsisžvelgia į elemento aukščio ir pločio nustatymus, eilutėje elementas gali būt tik vienas.</p>
+            </div>
+            <div>
+                <b>Display:inline;</b>
+                <p>Auštis yra automatinis, tai yra, elementas užima tiek pločio, kiek yra teksto. Aukštis yra kontroliuojamas,
+                    kad gerai sutilptų. Taigi inline visiškai ignoruoja elemento aukščio ir pločio nustatymus ir juos talpina
+                    į vieną eilutę.
+                </p>
+            </div>
+            <div>
+                <b>Display:inline-block;</b>
+                <p>
+                    Yra block ir inline kombinacija - atsižvelgia į elemento aukščio ir pločio nustatymus, bet išdėlioja elementus į vieną eilutę.
+                </p>
+            </div>
+            <div>
+                <b>Display:flex;</b>
+                <p>Leidžia potogiai išdėstyti, daug elementų (išlygiuoti, išdėstyti visomis kryptimis, ištempti iki tėvinio
+                    elemento dydžio, sucentruoti ir tt.)</p>
+            </div>
+            <div>
+                <b>Display:inline-flex;</b>
+                <p>??</p>
+            </div>
+            <div>
+                <b>Display:contents;</b>
+                <p>Panaikina tėvinį konteinerį ir padaro elementus aukščiau esančio tėvinio elemento vaikais.</p>
+            </div>
+            <div>
+                <b>Display:table;</b>
+                <p>
+                    Elementus išdėlioja kaip lentelę. Pagrindinsi pranašumas yra tai, kad vaikai
+                    <b>(display:table-cell) </b>yra tokio paties dydžio, ką būtu sunku pasiekti kitais būdais.
+                </p>
+            </div>
+            <div>
+                <b>Display:grid;</b>
+                <p>Elementus išdėlioja į gridą su numatomomis reikšmėmis.</p>
+            </div>
+            <div>
+                <b>Display:inherit;</b>
+                <p>
+                    Elementas paveldi savybes iš tėvinio elemento.
+                </p>
+            </div>
+            <div>
+                <b>Display:initial;</b>
+                <p>
+                    Išlaiko savuosiuos nustatymus, ignoruodamas tėvinio elemento.
+                </p>
+            </div>
+        </div>
+        <p>*Šio div display nustatymas yra inline-flex.</p>
+        <p class="displays">A</p>
+        <p class="displays">B</p>
+        <p class="displays">C</p>
+        <p class="displays">D</p>
+
+        <h3>Klasių keitimo pavyzdys keičiant display reikšmes</h3>
+        <button onclick="func_none()">None</button>
+        <button onclick="func_flex()">Block</button>
+        <button onclick="func_inline()">Inline</button>
+        <button onclick="func_inlineblock()">Inline-block</button>
+
+        <h2>SaSS ir kaip jį kompiliuot (PrePros)</h2>
+        <h3>SaSS</h3>
+        <p>
+            Sass tai stiliaus šablonų programavimo kalba, padaryta supaprastinti css. Naudojant sass galima tam tikrus nustatymus išsaugoti
+            į kintamuosius, taip sutaupant laiko perrašinėjant tuos pačius dalykus. Taip pat mixins,ji sukompiliuojama į
+            css.
+        </p>
+        <h3>Prepros</h3>
+        <p>Ką prepros iš esmės daro, tai sudeda kelis SaSS failus į vieną ir paverčia juos css failu.</p>
+        <h2>Material Design Spec</h2>
+        <h2>JavaScript</h2>
+
+        <p>
+            Sukurti listą, kuriame būtų penki punktai su nuorodomis.
+        </p>
+        <button onclick="func_dom()">dom</button>
+        <button id="jq">jQuery</button>
+
+    </main>
+</body>
+
+</html>
